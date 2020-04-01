@@ -7,3 +7,6 @@
 //
 
 import Foundation
+
+let solution = Solution1()
+print("Solution is: \(solution.singleNumber([1,1,2,3,2]))")
