@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Solution1 {
+class DayOne {
     var res: Int?
     var usedNumbers = Set<Int>()
 
@@ -29,6 +29,8 @@ class Solution1 {
         if res == nil {
             res = nums.filter{!usedNumbers.contains($0)}.first
         }
+
+        //forced unwrapped because we always have result by task definition
         return res!
     }
 }
