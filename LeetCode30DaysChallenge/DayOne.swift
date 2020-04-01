@@ -13,20 +13,12 @@ class DayOne {
     var usedNumbers = Set<Int>()
 
     func singleNumber(_ nums: [Int]) -> Int {
-        for num in nums {
-            if let res = res {
-                if res == num {
-                    self.res = nums.filter{!usedNumbers.contains($0)}.first
-                    usedNumbers.insert(num)
-                }
-            } else {
-                if !usedNumbers.contains(num) {
-                    self.res = num
-                }
-                usedNumbers.insert(num)
+        nums.forEach {
+            num in
+            if nums.filter({$0 == num}).count == 1 {
+                res = num
             }
         }
-
         //forced unwrapped because we always have result by task definition
         return res!
     }

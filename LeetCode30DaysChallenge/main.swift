@@ -9,4 +9,4 @@
 import Foundation
 
 let dayOne = DayOne()
-print("Solution is: \(dayOne.singleNumber([1,1,2,3,2]))")
+print("Solution is: \(dayOne.singleNumber([3,1,2,3,1,5,3,2,4,4]))")
