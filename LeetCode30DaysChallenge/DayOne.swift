@@ -16,7 +16,7 @@ class DayOne {
         for num in nums {
             if let res = res {
                 if res == num {
-                    self.res = nil
+                    self.res = nums.filter{!usedNumbers.contains($0)}.first
                     usedNumbers.insert(num)
                 }
             } else {
@@ -25,9 +25,6 @@ class DayOne {
                 }
                 usedNumbers.insert(num)
             }
-        }
-        if res == nil {
-            res = nums.filter{!usedNumbers.contains($0)}.first
         }
 
         //forced unwrapped because we always have result by task definition
