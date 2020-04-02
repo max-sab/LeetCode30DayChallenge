@@ -9,39 +9,19 @@
 import Foundation
 
 class DayOne {
-    var res: Int?
-    var usedNumbers = Set<Int>()
     var candidates = Set<Int>()
 
     func singleNumber(_ nums: [Int]) -> Int {
-        for num in nums {
-            if let res = res {
-                if res == num {
-                    self.res = nil
-                    usedNumbers.insert(num)
-                    candidates.remove(num)
-                } else if candidates.contains(num) {
-                    candidates.remove(num)
-                } else {
-                    candidates.insert(num)
-                }
+
+        nums.forEach {
+            if candidates.contains($0) {
+                candidates.remove($0)
             } else {
-                if !usedNumbers.contains(num) {
-                    self.res = num
-                    candidates.remove(num)
-                }
-                usedNumbers.insert(num)
+                candidates.insert($0)
             }
         }
-
-        if !candidates.isEmpty {
-            res = candidates.first
-        }
-
-        print(candidates)
-
         //forced unwrapped because we always have result by task definition
-        return res!
+        return candidates.first!
     }
     
 }
