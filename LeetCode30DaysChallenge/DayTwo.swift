@@ -10,17 +10,11 @@ import Foundation
 
 class DayTwo {
     var sum = 0
-    var prevSums = [Int]()
+    var prevSums = Set<Int>()
     func isHappy(_ n: Int) -> Bool {
         var digits = getDigits(for: n)
-        digits.forEach {
-            digit in
-            sum += Int(pow(Double(digit), 2))
-        }
-        prevSums.append(sum)
 
         while sum != 1 {
-            digits = getDigits(for: sum)
             sum = 0
             digits.forEach {
                 digit in
@@ -29,8 +23,8 @@ class DayTwo {
             if prevSums.contains(sum) {
                 return false
             }
-            prevSums.append(sum)
-
+            prevSums.insert(sum)
+            digits = getDigits(for: sum)
         }
 
         return true
@@ -43,10 +37,10 @@ class DayTwo {
         if num < 10 {
             return [num]
         }
-        repeat {
+        while currentNum >= 10 {
             digits.append(currentNum % 10)
             currentNum /= 10
-        } while currentNum >= 10
+        }
         digits.append(currentNum % 10)
         return digits
     }
