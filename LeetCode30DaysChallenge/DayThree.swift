@@ -12,9 +12,18 @@ struct DayThree {
     func maxSubArray(_ nums: [Int]) -> Int {
         var currentSum = 0
         var biggestSum = 0
-        for num in nums {
-            currentSum = currentSum + num > 0 ? currentSum + num : 0
-            biggestSum = biggestSum > currentSum ? biggestSum : currentSum
+
+        if nums.count > 0 {
+
+            //force unwrapping because nums.count > 0 here
+            if nums.max()! < 0 {
+                return nums.max()!
+            }
+
+            for num in nums {
+                currentSum = currentSum + num > 0 ? currentSum + num : 0
+                biggestSum = biggestSum > currentSum ? biggestSum : currentSum
+            }
         }
         return biggestSum
     }
