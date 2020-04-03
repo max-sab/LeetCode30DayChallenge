@@ -8,11 +8,11 @@
 
 import Foundation
 
-class DayOne {
-    var candidates = Set<Int>()
-
+struct DayOne {
+    
     func singleNumber(_ nums: [Int]) -> Int {
-
+        
+        var candidates = Set<Int>()
         nums.forEach {
             if candidates.contains($0) {
                 candidates.remove($0)

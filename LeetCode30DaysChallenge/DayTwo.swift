@@ -8,10 +8,10 @@
 
 import Foundation
 
-class DayTwo {
-    var sum = 0
-    var prevSums = Set<Int>()
+struct DayTwo {
     func isHappy(_ n: Int) -> Bool {
+        var sum = 0
+        var prevSums = Set<Int>()
         var digits = getDigits(for: n)
 
         while sum != 1 {

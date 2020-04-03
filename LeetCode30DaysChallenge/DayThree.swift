@@ -8,10 +8,10 @@
 
 import Foundation
 
-class DayThree {
-    var currentSum = 0
-    var biggestSum = 0
+struct DayThree {
     func maxSubArray(_ nums: [Int]) -> Int {
+        var currentSum = 0
+        var biggestSum = 0
         for num in nums {
             currentSum = currentSum + num > 0 ? currentSum + num : 0
             biggestSum = biggestSum > currentSum ? biggestSum : currentSum
