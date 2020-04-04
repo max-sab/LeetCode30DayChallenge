@@ -17,3 +17,7 @@ print("Solution for day 2 challenge is: \(dayTwo.isHappy(18))")
 let dayThree = DayThree()
 print("Solution for day 3 is: \(dayThree.maxSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4]))")
 
+let dayFour = DayFour()
+var arrayOfInts = [1,0,0,2,3,1]
+dayFour.moveZeroes(&arrayOfInts)
+print("Solution for day 4 is: \(arrayOfInts)")

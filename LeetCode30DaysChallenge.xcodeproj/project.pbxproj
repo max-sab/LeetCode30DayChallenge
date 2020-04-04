@@ -11,6 +11,7 @@
 		500314822434DF9500DE0084 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500314812434DF9500DE0084 /* main.swift */; };
 		500314842435C60500DE0084 /* DayTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500314832435C60500DE0084 /* DayTwo.swift */; };
 		500CB1FC24374F9A00475C8F /* DayThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500CB1FB24374F9A00475C8F /* DayThree.swift */; };
+		505C6D8D24389EF800DA36C2 /* DayFour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505C6D8C24389EF800DA36C2 /* DayFour.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,7 @@
 		500314812434DF9500DE0084 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		500314832435C60500DE0084 /* DayTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayTwo.swift; sourceTree = "<group>"; };
 		500CB1FB24374F9A00475C8F /* DayThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayThree.swift; sourceTree = "<group>"; };
+		505C6D8C24389EF800DA36C2 /* DayFour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayFour.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				500314812434DF9500DE0084 /* main.swift */,
 				500314832435C60500DE0084 /* DayTwo.swift */,
 				500CB1FB24374F9A00475C8F /* DayThree.swift */,
+				505C6D8C24389EF800DA36C2 /* DayFour.swift */,
 			);
 			path = LeetCode30DaysChallenge;
 			sourceTree = "<group>";
@@ -129,6 +132,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				505C6D8D24389EF800DA36C2 /* DayFour.swift in Sources */,
 				500314822434DF9500DE0084 /* main.swift in Sources */,
 				500314842435C60500DE0084 /* DayTwo.swift in Sources */,
 				5003147B2434DF1600DE0084 /* DayOne.swift in Sources */,
